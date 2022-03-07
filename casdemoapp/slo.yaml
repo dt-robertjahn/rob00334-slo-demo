@@ -111,4 +111,4 @@ objectives:
   key_sli: false
 total_score:
   pass: 90%
-  warning: 70%
+  warning: 20%
