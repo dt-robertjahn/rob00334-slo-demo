@@ -12,3 +12,17 @@ spec:
           https://webhook.site/2be34b4b-8a90-47cd-ba9f-a3e237e90765
       subscriptionID: 617ec8f2-fc97-4108-8daf-83f75ec19129
       sendFinished: false
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - curl --request POST --data
+          '{"@context":"https://schema.org/extensions","@type":"MessageCard","themeColor":"0072C6","title":"Cloud
+          Automation","text":"Click **Bridge** to open Cloud Automation
+          sequence","potentialAction":[{"@type":"OpenUri","name":"Bridge","targets":[{"os":"default","uri":"{{.env.secret_slackwebhook_bridgeUrl}}/trace/{{.shkeptncontext}}"}]}]}'
+          https://dynatrace.webhook.office.com/{{.secret.msteams.webhook}}
+      envFrom:
+        - name: secret_slackwebhook_bridgeUrl
+          secretRef:
+            name: slack-webhook
+            key: bridgeUrl
+      subscriptionID: e5930084-427c-4bfb-8902-eb6bd2518bae
+      sendFinished: false
