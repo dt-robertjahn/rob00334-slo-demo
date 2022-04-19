@@ -8,6 +8,9 @@ spec:
       sequences:
       - name: "getslo"
         tasks: 
+        - name: "notify"
+      - name: "getslo1"
+        tasks: 
         - name: "evaluation"
           properties:
             timeframe: "5m"
