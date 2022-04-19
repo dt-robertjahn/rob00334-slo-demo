@@ -12,29 +12,3 @@ spec:
           https://webhook.site/2be34b4b-8a90-47cd-ba9f-a3e237e90765
       subscriptionID: 617ec8f2-fc97-4108-8daf-83f75ec19129
       sendFinished: false
-    - type: sh.keptn.event.notify.triggered
-      requests:
-        - "curl --header 'Content-type: application/json' --request POST --data
-          '{\"@context\":\"https://schema.org/extensions\",\"@type\":\"MessageC\
-          ard\",\"themeColor\":\"0072C6\",\"summary\":\"Cloud Automation
-          Message\",\"sections\":[{\"activityTitle\":\"Cloud
-          Automation\",\"activitySubtitle\":\"Evaluation
-          Results\",\"facts\":[{\"name\":\"Project\",\"value\":\"{{.data.projec\
-          t}}\"},{\"name\":\"Service\",\"value\":\"{{.data.service}}\"},{\"name\
-          \":\"Stage\",\"value\":\"{{.data.stage}}\"},{\"name\":\"Result\",\"va\
-          lue\":\"{{.data.result}}\"}],\"markdown\":true}],\"potentialAction\":\
-          [{\"@type\":\"OpenUri\",\"name\":\"Open
-          Bridge\",\"targets\":[{\"os\":\"default\",\"uri\":\"{{.env.secret_sla\
-          ckwebhook_bridgeUrl}}/trace/{{.shkeptncontext}}\"}]}]}'
-          https://dynatrace.webhook.office.com/{{.env.secret_msteams_webhook}}"
-      envFrom:
-        - name: secret_msteams_webhook
-          secretRef:
-            name: msteams
-            key: webhook
-        - name: secret_slackwebhook_bridgeUrl
-          secretRef:
-            name: slack-webhook
-            key: bridgeUrl
-      subscriptionID: e5930084-427c-4bfb-8902-eb6bd2518bae
-      sendFinished: true
