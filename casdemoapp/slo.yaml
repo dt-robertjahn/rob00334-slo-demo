@@ -109,6 +109,60 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
+    - sli: catcount
+      displayName: ""
+      pass:
+        - criteria:
+            - <+10%
+            - <1000
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: networkRX_jahn-cas
+      displayName: ""
+      pass:
+        - criteria:
+            - <+10%
+            - <1000
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: networkRX_ca-execution-plane
+      displayName: ""
+      pass:
+        - criteria:
+            - <+10%
+            - <1000
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: networkRX_aks-nodepool1-41228380-vmss000001.diih1hxquqwuvgrr11iesqsbed.bx.internal.cloudapp.net
+      displayName: ""
+      pass:
+        - criteria:
+            - <+10%
+            - <1000
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: networkRX_aks-nodepool1-41228380-vmss000000.diih1hxquqwuvgrr11iesqsbed.bx.internal.cloudapp.net
+      displayName: ""
+      pass:
+        - criteria:
+            - <+10%
+            - <1000
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: networkRX_ca-quickstart
+      displayName: ""
+      pass:
+        - criteria:
+            - <+10%
+            - <1000
+      warning: []
+      weight: 1
+      key_sli: false
 total_score:
     pass: 100%
     warning: 99%
