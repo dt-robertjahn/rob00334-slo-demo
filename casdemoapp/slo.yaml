@@ -109,6 +109,15 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
+    - sli: svc_rt_p50
+      displayName: ""
+      pass:
+        - criteria:
+            - <+10%
+            - <1000
+      warning: []
+      weight: 1
+      key_sli: false
 total_score:
     pass: 100%
     warning: 99%
