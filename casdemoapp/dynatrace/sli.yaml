@@ -7,7 +7,7 @@ indicators:
     process_cpu: entitySelector=type(PROCESS_GROUP_INSTANCE)&metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names
     process_memory: MV2;Byte;entitySelector=type(PROCESS_GROUP_INSTANCE)&metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names
     svc_fr: entitySelector=type(SERVICE)&metricSelector=builtin:service.errors.server.rate:splitBy():avg:names
-    svc_rt_p50: MV2;MicroSecond;metricSelector=builtin:service.response.time:splitBy():median:names
+    svc_rt_p50: ""
     svc_rt_p90: MV2;MicroSecond;entitySelector=type(SERVICE)&metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names
     svc_rt_p95: MV2;MicroSecond;entitySelector=type(SERVICE)&metricSelector=builtin:service.response.time:splitBy():percentile(95.000000):names
     svc_tp_min: entitySelector=type(SERVICE)&metricSelector=builtin:service.requestCount.total:splitBy():value:names
