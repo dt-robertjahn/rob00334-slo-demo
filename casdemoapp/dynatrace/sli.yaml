@@ -1,8 +1,14 @@
 spec_version: 0.1.4
 indicators:
+    catcount: metricSelector=calc:service.catalogcount1000ms:filter(EQ("Dimension","/catalog")):splitBy("Dimension"):avg:names
     host_cpu: entitySelector=type(HOST)&metricSelector=builtin:host.cpu.usage:splitBy():avg:names
     host_disk_queue: entitySelector=type(HOST)&metricSelector=builtin:host.disk.queueLength:splitBy():max:names
     host_mem: entitySelector=type(HOST)&metricSelector=builtin:host.mem.usage:splitBy():avg:names
+    networkRX_aks-nodepool1-41228380-vmss000000.diih1hxquqwuvgrr11iesqsbed.bx.internal.cloudapp.net: metricSelector=builtin:tech.generic.network.packets.reRx:splitBy("dt.entity.host"):avg:names:filter(eq(dt.entity.host,aks-nodepool1-41228380-vmss000000.diih1hxquqwuvgrr11iesqsbed.bx.internal.cloudapp.net))
+    networkRX_aks-nodepool1-41228380-vmss000001.diih1hxquqwuvgrr11iesqsbed.bx.internal.cloudapp.net: metricSelector=builtin:tech.generic.network.packets.reRx:splitBy("dt.entity.host"):avg:names:filter(eq(dt.entity.host,aks-nodepool1-41228380-vmss000001.diih1hxquqwuvgrr11iesqsbed.bx.internal.cloudapp.net))
+    networkRX_ca-execution-plane: metricSelector=builtin:tech.generic.network.packets.reRx:splitBy("dt.entity.host"):avg:names:filter(eq(dt.entity.host,ca-execution-plane))
+    networkRX_ca-quickstart: metricSelector=builtin:tech.generic.network.packets.reRx:splitBy("dt.entity.host"):avg:names:filter(eq(dt.entity.host,ca-quickstart))
+    networkRX_jahn-cas: metricSelector=builtin:tech.generic.network.packets.reRx:splitBy("dt.entity.host"):avg:names:filter(eq(dt.entity.host,jahn-cas))
     proc_count: entitySelector=type(PROCESS_GROUP_INSTANCE)&metricSelector=builtin:tech.generic.processCount:splitBy():avg:names
     process_cpu: entitySelector=type(PROCESS_GROUP_INSTANCE)&metricSelector=builtin:tech.generic.cpu.usage:splitBy():avg:names
     process_memory: MV2;Byte;entitySelector=type(PROCESS_GROUP_INSTANCE)&metricSelector=builtin:tech.generic.mem.workingSetSize:splitBy():avg:names
